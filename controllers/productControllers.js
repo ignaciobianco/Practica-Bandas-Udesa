@@ -11,7 +11,7 @@ const productController = {
         let nombreBanda = req.params.id;
         let resultado = [];
         for (let i = 0; i < db.lista.length; i++) {
-            if (nombreBanda == db.lista[i].id) {
+            if (nombreBanda == db.lista[i].nombre) {
                 resultado.push(db.lista[i]);
             }
         }
@@ -20,7 +20,7 @@ const productController = {
         }
         else {
 
-            return res.send('detalleBanda', {
+            return res.render('detalleBanda', {
                 index: resultado
             })
 
