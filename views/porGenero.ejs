@@ -1,0 +1,16 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+<main>
+    
+    <ul>
+
+        <% for (let i = 0; i < index.length; i++) { %>
+
+            <a href="/listadoBandas/banda/<%= index[i].nombre %>"><li> Banda: <%= index[i].nombre %> </li></a>
+            
+
+        <% } %>
+    </ul>
+</main>
+<%- include('./partials/footer') %>

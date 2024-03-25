@@ -26,11 +26,7 @@ const productController = {
 
         }
     },
-
-
-
-
-    detalleGenero:  function (req, res) {
+    porGenero:  function (req, res) {
         let nombreGenero = req.params.id;
         let resultado = [];
         for (let i = 0; i < db.lista.length; i++) {
@@ -43,7 +39,9 @@ const productController = {
         }
         else {
 
-            return res.render('detalleBanda', {index: resultado})
+            return res.render('porGenero', {
+                index: resultado
+            })
 
         }
     }

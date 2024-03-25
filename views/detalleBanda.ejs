@@ -2,7 +2,7 @@
 <%- include('./partials/header') %>
 
 <main>
-    
+   
     <ul>
 
         <% for (let i = 0; i < index.length; i++) { %>
@@ -11,6 +11,8 @@
             <li> Integrantes: <%= index[i].integrantes %></li>
             <li>genero: <%= index[i].genero %></li>
             <li> Canciones más conocidas: <%= index[i].topCanciones%> </li>
+            <li><img src="/Pi-Bandas/public/<%=index[i].cover %>" alt="" width="100px"></li>
+            <li><iframe src="<%=index[i].video %>" frameborder="0"></iframe> </li>
         <% } %>
     </ul>
 </main>
