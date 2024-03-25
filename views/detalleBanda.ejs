@@ -1,0 +1,16 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+<main>
+    
+    <ul>
+
+        <% for (let i = 0; i < lista.length; i++) { %>
+
+            <li> Banda: <%= index[i].nombre %> Integrantes: <%= index[i].integrantes %>
+                genero: <%= index[i].genero %> Canciones más conocidas: <%= index[i].topCanciones%> </li>
+
+        <% } %>
+    </ul>
+</main>
+<%- include('./partials/footer') %>
