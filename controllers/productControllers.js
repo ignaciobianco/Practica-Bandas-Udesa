@@ -25,6 +25,27 @@ const productController = {
             })
 
         }
+    },
+
+
+
+
+    detalleGenero:  function (req, res) {
+        let nombreGenero = req.params.id;
+        let resultado = [];
+        for (let i = 0; i < db.lista.length; i++) {
+            if (nombreGenero == db.lista[i].genero) {
+                resultado.push(db.lista[i]);
+            }
+        }
+        if (resultado.length == 0) {
+            return res.send('no existe una genero con el nombre:' + nombreGenero)
+        }
+        else {
+
+            return res.render('detalleBanda', {index: resultado})
+
+        }
     }
 }
 

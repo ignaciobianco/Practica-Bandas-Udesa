@@ -6,6 +6,7 @@ const productController = require('../controllers/productControllers')
 
 router.get('/', productController.index)
 router.get('/banda/:id', productController.detalleBanda); 
+router.get('/genero/:id', productController.detalleGenero)
 
 
 
